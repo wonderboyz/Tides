@@ -19,7 +19,7 @@ const HomeScreen = ({ navigation, screenProps }) => {
 
         <Touch
           onPress={() => navigation.navigate('MultiBase')}
-          text="Jump to Multi tab"
+          text="Jump Calendar"
         />
 
         <Touch
@@ -37,7 +37,7 @@ const HomeScreen = ({ navigation, screenProps }) => {
 
 HomeScreen.navigationOptions = {
   headerTitleStyle: gStyle.headerTitleStyle,
-  title: 'Home'
+  title: 'Tide Charts'
 };
 
 HomeScreen.propTypes = {

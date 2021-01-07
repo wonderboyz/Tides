@@ -3,14 +3,14 @@ import { colors } from '../constants';
 
 // navigation stacks
 import HomeStack from './HomeStack';
-import MultiStack from './MultiStack';
+import Calendar from './Calendar';
 import StatsStack from './StatsStack';
 import SettingsStack from './SettingsStack';
 
 const BottomTabNavigator = createBottomTabNavigator(
   {
     HomeStack,
-    MultiStack,
+    Calendar,
     StatsStack,
     SettingsStack
   },

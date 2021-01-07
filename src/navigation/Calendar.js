@@ -7,9 +7,9 @@ import MultiBaseScreen from '../screens/MultiBaseScreen';
 import MultiLevel2Screen from '../screens/MultiLevel2Screen';
 
 // icons
-import SvgPages from '../components/icons/Svg.Pages';
+import SvgCalendar from '../components/icons/Svg.Pages';
 
-const MultiTabBarIcon = ({ focused }) => <SvgPages active={focused} />;
+const MultiTabBarIcon = ({ focused }) => <SvgCalendar active={focused} />;
 MultiTabBarIcon.propTypes = {
   // required
   focused: PropTypes.bool.isRequired
@@ -17,17 +17,17 @@ MultiTabBarIcon.propTypes = {
 
 // Multi Stack
 // /////////////////////////////////////////////////////////////////////////////
-const MultiStack = createStackNavigator(
+const Calendar = createStackNavigator(
   {
     MultiBase: MultiBaseScreen,
     MultiLevel2: MultiLevel2Screen
   },
   {
     navigationOptions: {
-      tabBarLabel: 'Multi',
+      tabBarLabel: 'Calendar',
       tabBarIcon: MultiTabBarIcon
     }
   }
 );
 
-export default MultiStack;
+export default Calendar;
