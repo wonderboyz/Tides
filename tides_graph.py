@@ -1,7 +1,12 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
-tides = pd.read_json('data.json')
+data = pd.read_json('data.json')
 
-df = pd.DataFrame(tides['datainfo']['data']['item'])
+tides = pd.DataFrame(data['datainfo']['data']['item'])
 
-print(df.head())
+
+def converter(val):
+  return float(val)
+
+tides['pred_in_ft']= tides['pred_in_ft'].apply(converter)

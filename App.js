@@ -21,7 +21,11 @@ const Tab = createBottomTabNavigator()
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer
+    style={{
+      flex:1,
+    }}
+    >
         <Tab.Navigator initialRouteName="Home"
         
         screenOptions = {({route}) => ({
