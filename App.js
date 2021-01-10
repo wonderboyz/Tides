@@ -52,6 +52,7 @@ export default function App() {
         //   activeTintColor: 'blue',
         //   inactinveTintColor: 'gray',
         // }}
+        // test
         >
           
 
