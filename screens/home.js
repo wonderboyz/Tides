@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, View, Text} from 'react-native';
+import { Button, View, Text, StyleSheet} from 'react-native';
 import {Icon} from 'react-native-elements'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -34,9 +34,9 @@ function HomeScreen({navigation}){
 
         </View>
         <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-around',paddingBottom: 20, flex: 0.5, backgroundColor:'#3393b0'}}>
-            <View style={{alignItems:'center'}}><Ionicons style={{padding:10}} name='arrow-down-circle-outline' size={50} color={'white'}/><Text style={{color:'white'}}>90% Waning</Text></View>
-            <View style={{justifyContent:'center', alignItems:'center'}}><Text>CALRSBAD</Text><Text>TODAY</Text><Text>JANUARy 09, 2020</Text></View>
-            <View style={{alignItems:'center' }}><Ionicons name='sunny-outline' size={50} color={'white'}/><Text style={{color:'white'}}>72°F | 64°F</Text></View>
+            <View style={{alignItems:'center'}}><Ionicons style={{}} name='arrow-down-circle-outline' size={50} color={'white'}/><Text style={{color:'white', paddingTop: 10}}>90% Waning</Text></View>
+            <View style={{ alignItems:'center'}}><Text style={styles.textbig}>CALRSBAD</Text><Text style={styles.textmed}>TODAY</Text><Text style={styles.textmed}>JANUARy 09, 2020</Text></View>
+            <View style={{alignItems:'center' }}><Ionicons name='sunny-outline' size={50} color={'white'}/><Text style={{color:'white', paddingTop: 10}}>72°F | 64°F</Text></View>
         </View>
 
         <View style={{flex:2}}><Text>Graph</Text></View>
@@ -48,6 +48,20 @@ function HomeScreen({navigation}){
 
 // background-color: #abe9cd;
 // background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+
+ const styles = StyleSheet.create({
+    textbig: {
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    textmed: {
+        color: 'white',
+        padding: 10,
+
+    }
+
+})
 
 
 export default HomeScreen
