@@ -1,8 +1,10 @@
 import React from 'react'
 import { Button, View, Text, StyleSheet} from 'react-native';
-import {Icon} from 'react-native-elements'
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+
+const arr1 = ['hello', 'world']
 
 function HomeScreen({navigation}){
     return(
@@ -35,11 +37,13 @@ function HomeScreen({navigation}){
         </View>
         <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-around',paddingBottom: 20, flex: 0.5, backgroundColor:'#3393b0'}}>
             <View style={{alignItems:'center'}}><Ionicons style={{}} name='arrow-down-circle-outline' size={50} color={'white'}/><Text style={{color:'white', paddingTop: 10}}>90% Waning</Text></View>
-            <View style={{ alignItems:'center'}}><Text style={styles.textbig}>CALRSBAD</Text><Text style={styles.textmed}>TODAY</Text><Text style={styles.textmed}>JANUARy 09, 2020</Text></View>
+            <View style={{ alignItems:'center'}}><Text style={styles.textbig}>CALRSBAD</Text><Text style={styles.textmed}>TODAY</Text><Text style={styles.textmed}>JANUARY 09, 2020</Text></View>
             <View style={{alignItems:'center' }}><Ionicons name='sunny-outline' size={50} color={'white'}/><Text style={{color:'white', paddingTop: 10}}>72°F | 64°F</Text></View>
         </View>
 
-        <View style={{flex:2}}><Text>Graph</Text></View>
+        <View style={{flex:2}}>{arr1.map(item => {
+            return <Text>{item}</Text>
+        })}</View>
         <View style={{flex:1, backgroundColor:'orange'}}><Text>Tide Info</Text></View>
     </View>
     )
